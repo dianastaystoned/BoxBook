@@ -1,0 +1,38 @@
+<br><br><br><div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <h1 class="title">Edit the information of {{book.title}}</h1>
+            <div class="card">
+                <div class="card-body">
+                    <form action="/book/edit/{{book.id}}" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="title" value="{{book.title}}" placeholder="Title" class="form-control" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{book.author}}" name="author" placeholder="Author" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="editorial" value="{{book.editorial}}" placeholder="Editorial" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="genre" value="{{book.genre}}" placeholder="Genre" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="pages"  value="{{book.pages}}" placeholder="Pages" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="cover" value="{{book.cover}}" placeholder="Cover" class="form-control" required><br>
+                            <button type="button" data-toggle="modal" data-target="#seeCoverModal{{id}}" class="btn btn-info btn-sm btn-block"><i class="fas fa-eye"></i> See cover</button>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-block">
+                                Save the book
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    </div>{{>seeCoverModal}}
+</div>

@@ -1,0 +1,118 @@
+{{!-- <br><br><br><div class="container p-4">
+    <div class="row">
+        {{#each book}}
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img src="{{cover}}" height="50%" width="50%">
+                        <h3 class="card-title text-uppercase">
+                            {{title}}
+                        </h3>
+                        <p class="m-2">{{author}}</p>
+                        <a href="/book/delete/{{id}}" class="btn btn-outline-danger">Delete book</a><br><br>
+                        <a href="/book/edit/{{id}}" class="btn btn-outline-info">Edit book info</a><br><br>
+                        <button type="button" data-toggle="modal" data-target="#markProgressModal{{id}}" class="btn btn-outline-info">Mark progress</button><br><br>
+                        <a href="/book/yourprogress/{{id}}" class="btn btn-outline-info">See progress</a>
+                    </div>
+                </div> 
+                <br>
+            </div>
+            {{>markProgressModal}}
+            {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>There's no books in this account</p>
+                    <a href="/book/add">Add some books now</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div> --}}
+{{!-- <div class="container">
+        <div class="bookCard">
+            {{#each book}}
+            <div class="bookBackground">
+                <img src="{{cover}}" alt="" class="book">
+            </div>
+            <div class="info">
+                <div class="bookName">
+                    <div>
+                        <h1 class="big">{{title}}</h1>
+                    </div>
+                    <h3 class="small">{{author}}</h3>
+                </div>
+                <div class="description">
+                    <h3 class="subtitle">{{editorial}}</h3>
+                    <p class="text">{{genre}}</p>
+                </div>
+                <div class="pages-container">
+                    <h3 class="subtitle">Number of pages</h3>
+                    <div class="pages">
+                        <span class="page">{{pages}}</span>
+                    </div>
+                </div>
+                <div class="button-section">
+                    <a href="/book/delete/{{id}}" class="buy">Delete book</a>
+                    <a href="/book/edit/{{id}}" class="buy">Edit book info</a>
+                    <button type="button" data-toggle="modal" data-target="#markProgressModal{{id}}" class="buy">Mark progress</button>
+                    <a href="/book/yourprogress/{{id}}" class="buy">See progress</a>
+                </div>
+            </div>
+            {{>markProgressModal}}
+                {{else}}
+                <div class="col-md-4 mx-auto">
+                    <div class="card card-body text-center">
+                        <p>There's no books in this account</p>
+                        <a href="/book/add">Add some books now</a>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div> --}}
+    <br><br><br><br>
+    {{#each book}}
+    <div class="containe">
+        <div class="bookcard">
+            <div class="shoeBackground">
+                <img src="{{cover}}" alt="" class="shoe show" color="blue">
+            </div>
+            <div class="info">
+                <div class="shoeName">
+                    <div>
+                        <h1 class="big">{{title}}</h1>
+                    </div>
+                    <h3 class="small">{{author}}</h3>
+                </div>
+                <div class="description">
+                    <h3 class="subtitle">{{genre}}</h3>
+                    <p class="text">{{editorial}}</p>
+                </div>
+                <div class="size-container">
+                    <h3 class="subtitle">pages</h3>
+                    <div class="sizes">
+                        <span class="size">{{pages}}</span>
+                    </div>
+                </div>
+                <div class="buy-price">
+                    <div class="row">
+                        <a href="/book/delete/{{id}}" class="btn">Delete</a><br><br>
+                        <a href="/book/edit/{{id}}" class="btn">Edit</a><br><br>
+                        <button type="button" data-toggle="modal" data-target="#markProgressModal{{id}}" class="btn">Mark progress</button><br><br>
+                        <a href="/book/yourprogress/{{id}}" class="btn">See progress</a>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    {{>markProgressModal}}
+                {{else}}
+                <div class="col-md-4 mx-auto">
+                    <div class="card card-body text-center">
+                        <p>There's no books in this account</p>
+                        <a href="/book/add">Add some books now</a>
+                    </div>
+                </div>
+    {{/each}}

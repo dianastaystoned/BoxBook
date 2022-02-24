@@ -1,0 +1,22 @@
+<header class="l-header">
+  <nav class="nav bd-grid">
+    <div>
+      <a href="/" class="nav__logo">Box Book</a>
+    </div>
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="#book" class="nav__link">Books</a></li>
+        {{#if user}}
+          <li class="nav__item"><a href="/book/add" class="nav__link"> Add </a></li>
+          <li class="nav__item"><a href="/logout" class="nav__link">Log Out</a></li>
+        {{/if}}
+      </ul>
+    </div>
+
+    <div class="nav__toggle" id="nav-toggle">
+      <i class='bx bx-menu'></i>
+    </div>
+  </nav>            
+</header>

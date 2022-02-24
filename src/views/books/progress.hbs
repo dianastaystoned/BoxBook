@@ -1,0 +1,24 @@
+<br><br><br><div class="container p-4">
+    <h1>Here's your progress in... {{book.title}}</h1><br>
+    <div class="row">
+        {{#each progress}}
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p class="m-2">Progress: {{progress}}%</p>
+                        <p class="m-2">Review: {{review}}</p>
+                        <p class="m-2">Score: {{score}}</p>
+                        <p class="m-2">Status: {{status}}</p>
+                    </div>
+                </div> 
+                <br>
+            </div>
+            {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>There's no progress in this book.</p>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

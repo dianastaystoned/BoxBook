@@ -1,0 +1,22 @@
+<div class="modal fade" tabindex="-1" id="seeCoverModal{{id}}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Book cover of {{book.title}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="container">
+              <div class="d-flex justify-content-center">
+                <img src="{{book.cover}}" class="w-75" alt="{{book.title}}">
+              </div>         
+          </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Close</button>
+        </div>
+       </form>
+    </div>
+  </div>
+</div>
